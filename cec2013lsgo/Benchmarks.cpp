@@ -27,10 +27,11 @@ Benchmarks::Benchmarks(){
 
   // minX = -100;
   // maxX = 100;
-  maxevals = 100000000;
+  maxevals = 3000000;
   numevals = 2*maxevals;
   best_fitness = -1;
   unsigned int increm = maxevals/10;
+//  unsigned int increm = 200000;
   unsigned int next=0;
   output = "";
   // Store the milestones (10% and previous milestones: 1.25e5, 6e5, 3e6)
@@ -1148,8 +1149,8 @@ void Benchmarks::update(double newfitness) {
         cerr <<"Error: many evaluations greater than maximum." <<endl;
         exit(1);
      }
-     cout <<"Warning: evaluations greater than maximum, will be ignored." <<endl;
-     return;
+//     cout <<"Warning: evaluations greater than maximum, will be ignored." <<endl;
+//     return;
   }
   if ((numevals == 0) || (newfitness < best_fitness))  {
     best_fitness = newfitness;
