@@ -19,8 +19,7 @@ for i in range(1, 16):
 cec2013lsgo = Extension("cec2013lsgo.cec2013",
                         sourcefiles,
                         language="c++",
-                        extra_compile_args=["-std=c++11"],
-                        libraries=["m"])  # Unix-like specific
+                        extra_compile_args=["-std=c++11"])  # Unix-like specific
 
 
 class PyTest(TestCommand):
